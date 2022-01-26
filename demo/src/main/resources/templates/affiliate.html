@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="./icon/manchester-united.png">
+<title th:text="${title}"></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,300&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/affiliate.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="header_text">
+				<h1>old trafford</h1>
+			</div>
+			<div class="header_basket">
+				  <a href="/Show_basket"><img src="./icon/basket.png" alt="basket"></a>
+			</div>
+		</div>
+		<div class="subheader">
+			<div class="subheader_logo">
+				<img src="./icon/manchester-united.png" alt="Manchester United">
+			</div>
+			<div class="subheader_search">
+				<form action="/search" class="subheader_search" method="get">
+					<div class="subheader_search_input">
+						
+							<input type="text" placeholder="Search" class="search" name="searchStr">
+						
+					</div>
+					<div class="subheader_search_but">
+						
+							<input type="image" src="./icon/search.png" class="button">
+						
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="nav">
+			<ul class="topmenu">
+				<li><a class="down">kits</a>
+					<ul class="submenu">
+						<li><a href="/away">Away</a></li>
+						<li><a href="/keeper">Goalkeeper</a></li>
+						<li><a href="/home">Home</a></li>
+						<li><a href="/third">Third</a></li>
+					</ul></li>
+				<li><a class="down">shop by player</a>
+					<ul class="submenu">
+						<div class="wrap">
+							<li><a href="/shop_Wan-Bissaka">Aaron Wan-Bissaka</a></li>
+							<li><a href="/shop_Fernandes">Bruno Fernandes</a></li>
+							<li><a href="/shop_Ronaldo">Cristiano Ronaldo</a></li>
+							<li><a href="/shop_De Gea">David De Gea</a></li>
+							<li><a href="/shop_Cavani">Edinson Cavani</a></li>
+							<li><a href="/shop_Bailly">Eric Bailly</a></li>
+							<li><a href="/shop_Varane">Rafael Varane</a></li>
+							<li><a href="/shop_Sancho">Jadon Sancho</a></li>
+							<li><a href="/shop_Lingard">Jesse Lingard</a></li>
+							<li><a href="/shop_Van_De_Beek">Donnie van de Beek</a></li>
+							<li><a href="/shop_Greenwood">Mason Greenwood</a></li>
+							<li><a href="/shop_Matic">Nemanja Matic</a></li>
+							<li><a href="/shop_Pogba">Paul Pogba</a></li>
+							<li><a href="/shop_McTominay">Scott McTominay</a></li>
+							<li><a href="/shop_Fred">Fred</a></li>
+							<li><a href="/shop_Rashford">Marcus Rashford</a></li>
+							<li><a href="/shop_Shaw">Luke Shaw</a></li>
+							<li><a href="/shop_Maguire">Harry Maguire</a></li>
+						</div>
+					</ul></li>
+				<li><a class="down">men</a>
+					<ul class="submenu">
+						<li><a href="/man_football_kits">Football Kits</a></li>
+						<li><a href="/man_headwear">Headwear</a></li>
+						<li><a href="/man_jackets">Jackets</a></li>
+					</ul></li>
+				<li><a class="down">women</a>
+					<ul class="submenu">
+						<li><a href="/women_tops">Tops</a></li>
+						<li><a href="/women_headwear">Headwear</a></li>
+						<li><a href="/women_scarves">Scarves</a></li>
+					</ul></li>
+				<li><a class="down">kids</a>
+					<ul class="submenu">
+						<li><a href="/kids_football_kits">Football Kits</a></li>
+						<li><a href="/kids_jackets">Jackets</a></li>
+						<li><a href="/kids_tracksuits">Tracksuits</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="container">
+	
+		<div class="div_img">
+				<img src="./Photos/content_1_0.jpg" alt="content_0">
+				<img src="./Photos/content_1.jpg" alt="content_1">
+				<img src="./Photos/content_2.jpg" alt="content_2">
+				<img src="./Photos/content_3.jpg" alt="content_3">
+                <img src="./Photos/content_4.jpg" alt="content_4">
+				<img src="./Photos/content_5.jpg" alt="content_5">
+				<img src="./Photos/content_6.jpg" alt="content_6">
+		</div>	
+        
+		
+
+		<div class="footer">
+			<div class="wrapper_footer">
+				<div class="footer_card">
+					<h3>customer service</h3>
+					<p>
+						<a href="/help" target="_blank">Help</a>
+					</p>
+					<p>
+						<a href="/track" target="_blank">Track Order</a>
+					</p>
+					<p>
+						<a href="/size_chart" target="_blank">Size Chart</a>
+					</p>
+				</div>
+				<div class="footer_card">
+					<h3>Information</h3>
+					<p>
+						<a href="/help" target="_blank">About us</a>
+					</p>
+					<p>
+						<a href="/affiliate" target="_blank">Affiliate Program</a>
+					</p>
+				</div>
+				<div class="footer_card">
+					<h3>Follow us</h3>
+					<div class="icons">
+						<div class="icon">
+							<a href="https://www.facebook.com/manchesterunited" target="_blank"><img src="./icon/facebook.png" alt="facebook"></a>
+						</div>
+						<div class="icon">
+							<a href="https://twitter.com/ManUtd" target="_blank"><img src="./icon/twitter.png" alt="twitter"></a>
+						</div>
+						<div class="icon">
+							<a href="https://www.instagram.com/manchesterunited" target="_blank"><img src="./icon/instagram.png" alt="youtube"></a>
+						</div>
+						<div class="icon">
+							<a href="https://www.youtube.com/manutd" target="_blank"><img
+								src="./icon/premium-icon-youtube-3669688.png" alt="youtube"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy_right">
+				<img src="./icon/copyright.png" alt="CopyRight" id="theme"
+					onclick="myFunc()">
+				<h3>Hasan Abdurahmonov 2021</h3>
+			</div>
+		</div>
+	</div>
+	<script>
+		function myFunc() {
+			if (document.body.style.backgroundColor == "white") {
+				document.body.style.backgroundImage = "url('./Photos/siniy_pyatna_fon_odnotonnyy_69084_1920x1080.jpg')";
+				document.body.style.backgroundRepeat = "no-repeat";
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundColor = "gray";
+			} else {
+				document.body.style.backgroundColor = "none";
+				document.body.style.backgroundColor = "white";
+				document.body.style.backgroundImage = "none";
+			}
+
+		}
+	</script>
+</body>
+</html>

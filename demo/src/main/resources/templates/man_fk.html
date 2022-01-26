@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./icon/manchester-united.png">
+        <title th:text="${title}"></title>
+        <link rel="stylesheet" type="text/css" href="/away.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,900;1,100;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="header_text">
+                    <h1>old trafford</h1>
+                </div>
+                <div class="header_basket">
+                    <img src="./icon/basket.png" alt="basket">
+                </div>
+            </div>
+            <div class="subheader">
+                <div class="subheader_logo">
+                    <img src="./icon/manchester-united.png" alt="Manchester United">
+                </div>
+                <div class="subheader_search">
+                   <form action="/search" class="subheader_search" method="get">
+					<div class="subheader_search_input">
+						
+							<input type="text" placeholder="Search" class="search" name="searchStr">
+						
+					</div>
+					<div class="subheader_search_but">
+						
+							<input type="image" src="./icon/search.png" class="button">
+						
+					</div>
+				</form>
+                </div>
+            </div>
+    
+            <div class="nav">
+                <ul class="topmenu"> 
+                    <li><a class="down">kits</a>
+                        <ul class="submenu">
+                            <li><a href="/away">Away</a></li>
+                            <li><a href="/keeper">Goalkeeper</a></li>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/third">Third</a></li>
+                        </ul>
+                    </li>
+                    <li><a  class="down">shop by player</a>
+                        <ul class="submenu">
+                            <div class="wrap">    
+                           <li><a href="/shop_Wan-Bissaka">Aaron Wan-Bissaka</a></li>
+							<li><a href="/shop_Fernandes">Bruno Fernandes</a></li>
+							<li><a href="/shop_Ronaldo">Cristiano Ronaldo</a></li>
+							<li><a href="/shop_De Gea">David De Gea</a></li>
+							<li><a href="/shop_Cavani">Edinson Cavani</a></li>
+							<li><a href="/shop_Bailly">Eric Bailly</a></li>
+							<li><a href="/shop_Varane">Rafael Varane</a></li>
+							<li><a href="/shop_Sancho">Jadon Sancho</a></li>
+							<li><a href="/shop_Lingard">Jesse Lingard</a></li>
+							<li><a href="/shop_Van_De_Beek">Donnie van de Beck</a></li>
+							<li><a href="/shop_Greenwood">Mason Greenwood</a></li>
+							<li><a href="/shop_Matic">Nemanja Matic</a></li>
+							<li><a href="/shop_Pogba">Paul Pogba</a></li>
+							<li><a href="/shop_McTominay">Scott McTominay</a></li>
+							<li><a href="/shop_Fred">Fred</a></li>
+							<li><a href="/shop_Rashford">Marcus Rashford</a></li>
+							<li><a href="/shop_Shaw">Luke Shaw</a></li>
+							<li><a href="/shop_Maguire">Harry Maguire</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a class="down">men</a>
+                        <ul class="submenu">
+                            <li><a href="/man_football_kits">Football Kits</a></li>
+							<li><a href="/man_headwear">Headwear</a></li>
+							<li><a href="/man_jackets">Jackets</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="down">women</a>
+                     <ul class="submenu">
+						<li><a href="/women_tops">Tops</a></li>
+						<li><a href="/women_headwear">Headwear</a></li>
+						<li><a href="/women_scarves">Scarves</a></li>
+					</ul></li>
+				<li><a class="down">kids</a>
+					<ul class="submenu">
+						<li><a href="/kids_football_kits">Football Kits</a></li>
+						<li><a href="/kids_jackets">Jackets</a></li>
+						<li><a href="/kids_tracksuits">Tracksuits</a></li>
+					</ul></li>
+            </ul>
+            </div>
+        
+            <div class="direct">
+                <a href="/">Manchester United</a><i>/</i><p class="direct_name" th:text=${direct_name}></p>
+            </div>
+        
+
+            <div class="struct">
+                <div class="prefers">
+                    <ul><h2>Kit Type</h2>
+                        <li><input type="radio" id="away" name="kit" value="away" class="in_put">
+                        <label for="away"><a href="/man_away" th:onclick="newURL()">Away</a></label></li>
+                        <li><input type="radio" id="home" name="kit" value="home">
+                        <label for="home"><a href="/man_home" th:onclick="newURL()">Home</a></label></li>
+                        <li><input type="radio" id="third" name="kit" value="third">
+                        <label for="third"><a href="/man_third" th:onclick="newURL()">Third</a></label></li>
+                        <li><input type="radio" id="goalkeeper" name="kit" value="goalkeeper">
+                        <label for="goalkeeper"><a href="/man_goalkeeper" th:onclick="newURL()">Goalkeeper</a></label></li>
+                    </ul>
+                    <ul><h2>Sub Department</h2>
+                        <li><input type="radio" id="full_kits" name="sub" value="full_kits">
+                        <label for="full_kits"><a href="/man_sub_full_kits" th:onclick="newURL()">Full Kits</a></label></li>
+                        <li><input type="radio" id="shirts" name="sub" value="shirts">
+                        <label for="shirts"><a href="/man_sub_shirts" th:onclick="newURL()">Shirts</a></label></li>
+                        <li><input type="radio" id="shorts" name="sub" value="shorts">
+                        <label for="shorts"><a href="/man_sub_shorts" th:onclick="newURL()">Shorts</a></label></li>
+                        <li><input type="radio" id="socks" name="sub" value="socks">
+                        <label for="socks"><a href="/man_sub_socks" >Socks</a></label></li>
+                    </ul>
+                    <ul><h2>Players</h2>
+                       <li><input type="radio" id="cristiano" name="players" value="cristiano">
+                        <label for="cristiano"><a href="/man_Ronaldo" th:onclick="newURL()">Cristiano Ronaldo</a></label></li>
+                        <li><input type="radio" id="rashford" name="players" value="rashford">
+                        <label for="rashford"><a href="/man_Rashford" th:onclick="newURL()">Marcus Rashford</a></label></li>
+                        <li><input type="radio" id="fernandes" name="players" value="fernandes">
+                        <label for="fernandes"><a href="/man_Fernandes" th:onclick="newURL()">Bruno Fernandes</a></label></li>
+                        <li><input type="radio" id="greenwood" name="players" value="greenwood">
+                        <label for="greenwood"><a href="/man_Greenwood" th:onclick="newURL()">Mason Greenwood</a></label></li>
+                        <li><input type="radio" id="sancho" name="players" value="sancho">
+                        <label for="sancho"><a href="/man_Sancho" th:onclick="newURL()">Jadon Sancho</a></label></li>
+                        <li><input type="radio" id="cavani" name="players" value="cavani">
+                        <label for="cavani"><a href="/man_Cavani" th:onclick="newURL()">Edinson Cavani</a></label></li>
+                        <li><input type="radio" id="pogba" name="players" value="pogba">
+                        <label for="pogba"><a href="/man_Pogba" th:onclick="newURL()">Paul Pogba</a></label></li>
+                        <li><input type="radio" id="varane" name="players" value="varane">
+                        <label for="varane"><a href="/man_Varane" th:onclick="newURL()">Raphael Varane</a></label></li>
+                        <li class="more"><input type="radio" id="david" name="players" value="david">
+                        <label for="david"><a href="/man_De Gea" th:onclick="newURL()">David De Gea</a></label></li>
+                        <li class="more"><input type="radio" id="bissaka" name="players" value="bissaka">
+                        <label for="bissaka"><a href="/man_Wan-Bissaka" th:onclick="newURL()">Aaron Wan-Bissaka</a></label></li>
+                        <li class="more"><input type="radio" id="bailly" name="players" value="bailly">
+                        <label for="bailly"><a href="/man_Bailly" th:onclick="newURL()">Eric Bailly</a></label></li>
+                        <li class="more"><input type="radio" id="lingard" name="players" value="lingard">
+                        <label for="lingard"><a href="/man_Lingard" th:onclick="newURL()">Jesse Lingard</a></label></li>
+                        <li class="more"><input type="radio" id="beek" name="players" value="beek">
+                        <label for="beek"><a href="/man_Van De Beek" th:onclick="newURL()">Donnie van de Beek</a></label></li>
+                        <li class="more"><input type="radio" id="matic" name="players" value="matic">
+                        <label for="matic"><a href="/man_Matic" th:onclick="newURL()">Nemanja Matic</a></label></li>
+                        <li class="more"><input type="radio" id="mctominy" name="players" value="mctominy">
+                        <label for="mctominy"><a href="/man_McTominay" th:onclick="newURL()">Scott McTominay</a></label></li>
+                        <li class="more"><input type="radio" id="fred" name="players" value="fred">
+                        <label for="fred"><a href="/man_Fred" th:onclick="newURL()">Fred</a></label></li>
+                        <li class="more"><input type="radio" id="shaw" name="players" value="shaw">
+                        <label for="shaw"><a href="/man_Shaw" th:onclick="newURL()">Luke Shaw</a></label></li>
+                        <li class="more"><input type="radio" id="maguire" name="players" value="maguire">
+                        <label for="maguire"><a href="/man_Maguire" th:onclick="newURL()">Harry Maguire</a></label></li>
+                        <p  id="view" onclick="ReadMore()">View all players</p>
+                    </ul>
+                </div>
+                <div class="kits">
+                    <div class="drop_down_items">
+                        <div class="drop_down_items_filter">
+                            <button class="dropbtn">Top Sellers</button>
+                            <div class="dropdown-content">
+                                <a href="#">Lowest Price</a>
+                                <a href="#">Highest Price</a>
+                                <a href="#">Newest Items</a>
+                            </div>
+                        </div>
+                        <div class="drop_down_items_quan">
+                            <button class="dropbtn">12 Items</button>
+                            <div class="dropdown-content">
+                                <a href="/man_football_kits_12">12 Items</a>
+                                <a href="/man_football_kits_24">24 Items</a>
+                                <a href="/man_football_kits_36">36 Items</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods">
+           
+                        <!-- first row -->
+                        
+                        <div class="good_cards" th:each="img_src:${img_source}">
+                            <img th:src="${img_src.src_arr}" th:alt="${img_src.alt_arr}">
+                            <div class="price"><sup>£</sup><span th:text="${img_src.pr_arr}"></span><sup th:text="${img_src.pr_coin_arr}"></sup></div>
+                            <a class="desript" href="/link" th:text="${img_src.alt_arr}" id="link" th:onclick="newURL_T(this)"></a>
+                        </div>
+                          
+                    
+                    </div>
+                    <div class="page_wrap">
+                        <div class="pages">
+                            <div class="prev">
+                                <img src="./icon/next.png" alt="prev">
+                            </div>
+                            <div class="first">
+                                <p>1</p>
+                            </div>
+                            <div class="second">
+                                <p>2</p>
+                            </div>
+                            <div class="third">
+                                <p>3</p>
+                            </div>
+                            <div class="next">
+                                <img src="./icon/next.png" alt="next">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer">
+				<div class="wrapper_footer">
+					<div class="footer_card">
+						<h3>customer service</h3>
+						<p>
+							<a href="/help" target="_blank">Help</a>
+						</p>
+						<p>
+							<a href="/track" target="_blank">Track Order</a>
+						</p>
+						<p>
+							<a href="/size_chart" target="_blank">Size Chart</a>
+						</p>
+					</div>
+					<div class="footer_card">
+						<h3>Information</h3>
+						<p>
+							<a href="/help" target="_blank">About us</a>
+						</p>
+						<p>
+							<a href="/affiliate" target="_blank">Affiliate Program</a>
+						</p>
+					</div>
+					<div class="footer_card">
+						<h3>Follow us</h3>
+						<div class="icons">
+							<div class="icon">
+								<a href="https://www.facebook.com/manchesterunited" target="_blank"><img src="./icon/facebook.png" alt="facebook"></a>
+							</div>
+							<div class="icon">
+								<a href="https://twitter.com/ManUtd" target="_blank"><img src="./icon/twitter.png" alt="twitter"></a>
+							</div>
+							<div class="icon">
+								<a href="https://www.instagram.com/manchesterunited" target="_blank"><img src="./icon/instagram.png" alt="youtube"></a>
+							</div>
+							<div class="icon">
+								<a href="https://www.youtube.com/manutd" target="_blank"><img
+									src="./icon/premium-icon-youtube-3669688.png" alt="youtube"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copy_right">
+					<img src="./icon/copyright.png" alt="CopyRight" id="theme"
+						onclick="myFunc()">
+					<h3>Hasan Abdurahmonov 2021</h3>
+				</div>
+			</div>
+        </div>
+	    
+
+            <script>
+            function myFunc(){
+                if(document.body.style.backgroundColor == "white"){
+                document.body.style.backgroundImage="url('./Photos/siniy_pyatna_fon_odnotonnyy_69084_1920x1080.jpg')";
+                document.body.style.backgroundRepeat="no-repeat";
+                document.body.style.backgroundSize="cover";
+                document.body.style.backgroundColor ="gray";
+                }else{
+                document.body.style.backgroundColor="none";
+                document.body.style.backgroundColor="white";
+                document.body.style.backgroundImage="none";
+                }
+            
+            }
+
+            function ReadMore(){
+                var more=document.getElementsByClassName('more');
+                var view=document.getElementById('view');
+                for(var i =0; i<more.length;i++){
+                    more[i].style.display="block";
+                }
+                view.style.display="none";
+            }
+            
+            function newURL(){
+            	let stateObj = { foo: "players" }
+            	history.pushState(stateObj, "player", "[[${url}]]");
+            	
+            }
+            
+            </script>
+    </body>
+</html>

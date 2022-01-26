@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="./icon/manchester-united.png">
+<title th:text="${title}"></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,300&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/help.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="header_text">
+				<h1>old trafford</h1>
+			</div>
+			<div class="header_basket">
+				  <a href="/Show_basket"><img src="./icon/basket.png" alt="basket"></a>
+			</div>
+		</div>
+		<div class="subheader">
+			<div class="subheader_logo">
+				<img src="./icon/manchester-united.png" alt="Manchester United">
+			</div>
+			<div class="subheader_search">
+				<form action="/search" class="subheader_search" method="get">
+					<div class="subheader_search_input">
+						
+							<input type="text" placeholder="Search" class="search" name="searchStr">
+						
+					</div>
+					<div class="subheader_search_but">
+						
+							<input type="image" src="./icon/search.png" class="button">
+						
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="nav">
+			<ul class="topmenu">
+				<li><a class="down">kits</a>
+					<ul class="submenu">
+						<li><a href="/away">Away</a></li>
+						<li><a href="/keeper">Goalkeeper</a></li>
+						<li><a href="/home">Home</a></li>
+						<li><a href="/third">Third</a></li>
+					</ul></li>
+				<li><a class="down">shop by player</a>
+					<ul class="submenu">
+						<div class="wrap">
+							<li><a href="/shop_Wan-Bissaka">Aaron Wan-Bissaka</a></li>
+							<li><a href="/shop_Fernandes">Bruno Fernandes</a></li>
+							<li><a href="/shop_Ronaldo">Cristiano Ronaldo</a></li>
+							<li><a href="/shop_De Gea">David De Gea</a></li>
+							<li><a href="/shop_Cavani">Edinson Cavani</a></li>
+							<li><a href="/shop_Bailly">Eric Bailly</a></li>
+							<li><a href="/shop_Varane">Rafael Varane</a></li>
+							<li><a href="/shop_Sancho">Jadon Sancho</a></li>
+							<li><a href="/shop_Lingard">Jesse Lingard</a></li>
+							<li><a href="/shop_Van_De_Beek">Donnie van de Beek</a></li>
+							<li><a href="/shop_Greenwood">Mason Greenwood</a></li>
+							<li><a href="/shop_Matic">Nemanja Matic</a></li>
+							<li><a href="/shop_Pogba">Paul Pogba</a></li>
+							<li><a href="/shop_McTominay">Scott McTominay</a></li>
+							<li><a href="/shop_Fred">Fred</a></li>
+							<li><a href="/shop_Rashford">Marcus Rashford</a></li>
+							<li><a href="/shop_Shaw">Luke Shaw</a></li>
+							<li><a href="/shop_Maguire">Harry Maguire</a></li>
+						</div>
+					</ul></li>
+				<li><a class="down">men</a>
+					<ul class="submenu">
+						<li><a href="/man_football_kits">Football Kits</a></li>
+						<li><a href="/man_headwear">Headwear</a></li>
+						<li><a href="/man_jackets">Jackets</a></li>
+					</ul></li>
+				<li><a class="down">women</a>
+					<ul class="submenu">
+						<li><a href="/women_tops">Tops</a></li>
+						<li><a href="/women_headwear">Headwear</a></li>
+						<li><a href="/women_scarves">Scarves</a></li>
+					</ul></li>
+				<li><a class="down">kids</a>
+					<ul class="submenu">
+						<li><a href="/kids_football_kits">Football Kits</a></li>
+						<li><a href="/kids_jackets">Jackets</a></li>
+						<li><a href="/kids_tracksuits">Tracksuits</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="container">
+        <h2 class="about">About Us</h2>
+        <p class="sub_about">Our website is managed by <b>Hasan Abdurahmonov.</b></p>
+        <div class="div_txt">
+            <p>As the global leader in licensed sports merchandise, Fanatics delivers to over 180 countries, runs stores in over 12 languages and supports multi-lingual call centres incorporating 11 languages.</p>
+            <p>
+                Fanatics extended the reach of its licensed sports merchandise business by acquiring UK-based international sports e-commerce company, Kitbag on February 2nd, 2016. It now supports and compliments by Hasan Abdurahmonov successful U.S. operation by focusing on partnerships with the biggest sporting teams and organisations around the world.
+            </p>
+            <p>
+                Operating from its base in the UK's sporting stronghold of Manchester, the international business provides online, retail and end-to-end event solutions for over 30 partners across various sports. Fanatics has relationships with globally recognised English Premier League, La Liga, Bundesliga and Ligue 1 clubs, along with representation across all major US Sports Leagues, Golf, Rugby, F1, esports and Tennis.
+            </p>
+            <p>
+                Internationally, Fanatics also delivers specific global leadership in event, city centre and in-venue retail; providing expertise at leading soccer, rugby and golfing venues. Fulfilment and service infrastructure has also expanded internationally, leveraging the historic expertise of Kitbag in international markets and integrating with the marketing and technology solutions traditionally used by Fanatics across its sites and partners in the U.S.
+            </p>
+            <p>
+                United Direct, the Official Online Store is operated under licence by Hasan Abdurahmonov.
+            </p>
+            <h3>Contacting Us by Email</h3>
+            <p>We are happy to answer queries on products, orders and anything else about the online store at the below address:
+            </p>
+            <a href="mailto:ya.hasan2001@yandex.ru" class="mail">ya.hasan2001@yandex.ru</a>
+            <p>We endeavour to respond to all emails within 24 hours.</p>
+        </div>
+		
+
+		<div class="footer">
+			<div class="wrapper_footer">
+				<div class="footer_card">
+					<h3>customer service</h3>
+					<p>
+						<a href="/help" target="_blank">Help</a>
+					</p>
+					<p>
+						<a href="/track" target="_blank">Track Order</a>
+					</p>
+					<p>
+						<a href="/size_chart" target="_blank">Size Chart</a>
+					</p>
+				</div>
+				<div class="footer_card">
+					<h3>Information</h3>
+					<p>
+						<a href="/help" target="_blank">About us</a>
+					</p>
+					<p>
+						<a href="/affiliate" target="_blank">Affiliate Program</a>
+					</p>
+				</div>
+				<div class="footer_card">
+					<h3>Follow us</h3>
+					<div class="icons">
+						<div class="icon">
+							<a href="https://www.facebook.com/manchesterunited" target="_blank"><img src="./icon/facebook.png" alt="facebook"></a>
+						</div>
+						<div class="icon">
+							<a href="https://twitter.com/ManUtd" target="_blank"><img src="./icon/twitter.png" alt="twitter"></a>
+						</div>
+						<div class="icon">
+							<a href="https://www.instagram.com/manchesterunited" target="_blank"><img src="./icon/instagram.png" alt="youtube"></a>
+						</div>
+						<div class="icon">
+							<a href="https://www.youtube.com/manutd" target="_blank"><img
+								src="./icon/premium-icon-youtube-3669688.png" alt="youtube"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy_right">
+				<img src="./icon/copyright.png" alt="CopyRight" id="theme"
+					onclick="myFunc()">
+				<h3>Hasan Abdurahmonov 2021</h3>
+			</div>
+		</div>
+	</div>
+	<script>
+		function myFunc() {
+			if (document.body.style.backgroundColor == "white") {
+				document.body.style.backgroundImage = "url('./Photos/siniy_pyatna_fon_odnotonnyy_69084_1920x1080.jpg')";
+				document.body.style.backgroundRepeat = "no-repeat";
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundColor = "gray";
+			} else {
+				document.body.style.backgroundColor = "none";
+				document.body.style.backgroundColor = "white";
+				document.body.style.backgroundImage = "none";
+			}
+
+		}
+	</script>
+</body>
+</html>

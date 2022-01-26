@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./icon/manchester-united.png">
+        <title th:text="${title}"></title>
+        <link rel="stylesheet" type="text/css" href="/away.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,900;1,100;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="header_text">
+                    <h1>old trafford</h1>
+                </div>
+                <div class="header_basket">
+                     <a href="/Show_basket"><img src="./icon/basket.png" alt="basket"></a>
+                </div>
+            </div>
+            <div class="subheader">
+                <div class="subheader_logo">
+                    <img src="./icon/manchester-united.png" alt="Manchester United">
+                </div>
+                <div class="subheader_search">
+                   <form action="/search" class="subheader_search" method="get">
+					<div class="subheader_search_input">
+						
+							<input type="text" placeholder="Search" class="search" name="searchStr">
+						
+					</div>
+					<div class="subheader_search_but">
+						
+							<input type="image" src="./icon/search.png" class="button">
+						
+					</div>
+				</form>
+                </div>
+            </div>
+    
+            <div class="nav">
+                <ul class="topmenu"> 
+                    <li><a class="down">kits</a>
+                        <ul class="submenu">
+                            <li><a href="/away">Away</a></li>
+                            <li><a href="/keeper">Goalkeeper</a></li>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/third">Third</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="down">shop by player</a>
+                        <ul class="submenu">
+                            <div class="wrap">    
+                               <li><a href="/shop_Wan-Bissaka">Aaron Wan-Bissaka</a></li>
+							<li><a href="/shop_Fernandes">Bruno Fernandes</a></li>
+							<li><a href="/shop_Ronaldo">Cristiano Ronaldo</a></li>
+							<li><a href="/shop_De Gea">David De Gea</a></li>
+							<li><a href="/shop_Cavani">Edinson Cavani</a></li>
+							<li><a href="/shop_Bailly">Eric Bailly</a></li>
+							<li><a href="/shop_Varane">Rafael Varane</a></li>
+							<li><a href="/shop_Sancho">Jadon Sancho</a></li>
+							<li><a href="/shop_Lingard">Jesse Lingard</a></li>
+							<li><a href="/shop_Van_De_Beek">Donnie van de Beck</a></li>
+							<li><a href="/shop_Greenwood">Mason Greenwood</a></li>
+							<li><a href="/shop_Matic">Nemanja Matic</a></li>
+							<li><a href="/shop_Pogba">Paul Pogba</a></li>
+							<li><a href="/shop_McTominay">Scott McTominay</a></li>
+							<li><a href="/shop_Fred">Fred</a></li>
+							<li><a href="/shop_Rashford">Marcus Rashford</a></li>
+							<li><a href="/shop_Shaw">Luke Shaw</a></li>
+							<li><a href="/shop_Maguire">Harry Maguire</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a class="down">men</a>
+                        <ul class="submenu">
+                         	<li><a href="/man_football_kits">Football Kits</a></li>
+							<li><a href="/man_headwear">Headwear</a></li>
+							<li><a href="/man_jackets">Jackets</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="down">women</a>
+                        <ul class="submenu">
+						<li><a href="/women_tops">Tops</a></li>
+						<li><a href="/women_headwear">Headwear</a></li>
+						<li><a href="/women_scarves">Scarves</a></li>
+					</ul></li>
+				<li><a class="down">kids</a>
+					<ul class="submenu">
+						<li><a href="/kids_football_kits">Football Kits</a></li>
+						<li><a href="/kids_jackets">Jackets</a></li>
+						<li><a href="/kids_tracksuits">Tracksuits</a></li>
+					</ul></li>
+            </ul>
+            </div>
+        
+            <div class="direct">
+                <a href="/">Manchester United</a><i>/</i><p class="direct_name" th:text=${direct_name}></p>
+            </div>
+        
+
+            <div class="struct">
+                <div class="prefers">
+                    <ul><h2>Shop for</h2>
+                        <li><a href="/men" th:onclick="newURL()">Men</a></li>
+                        <li><a href="/women" th:onclick="newURL()">Women</a></li>
+                        <li><a href="/kids" th:onclick="newURL()">Kids</a></li>
+                        <li><a href="baby" th:onclick="newURL()">Baby</a></li>
+                    </ul>
+                    <ul><h2>Sub Department</h2>
+                   <li><a href="/full_kits" th:onclick="newURL()">Full Kits</a></li>
+                        <li><a href="/shirts" th:onclick="newURL()">Shirts</a></li>
+                        <li><a href="/shorts" th:onclick="newURL()">Shorts</a></li>
+                        <li><a href="/socks" th:onclick="newURL()">Socks</a></li>
+                    </ul>
+                    <ul><h2>Players</h2>
+                        <li><a href="/ronaldo" th:onclick="newURL()">Cristiano Ronaldo</a></li>
+                        <li><a href="/rashford" th:onclick="newURL()">Marcus Rashford</a></li>
+                        <li><a href="/fernandes" th:onclick="newURL()">Bruno Fernandes</a></li>
+                        <li><a href="/greenwood" th:onclick="newURL()">Mason Greenwood</a></li>
+                        <li><a href="/sancho" th:onclick="newURL()">Jadon Sancho</a></li>
+                        <li><a href="/cavani" th:onclick="newURL()">Edinson Cavani</a></li>
+                        <li><a href="/pogba" th:onclick="newURL()">Paul Pogba</a></li>
+                        <li><a href="/varane" th:onclick="newURL()">Raphael Varane</a></li>
+                        <li class="more"><a href="/de_gea" th:onclick="newURL()">David De Gea</a></li>
+                        <li class="more"><a href="/wan_bissaka" th:onclick="newURL()">Aaron Wan-Bissaka</a></li>
+                        <li class="more"><a href="/bailly" th:onclick="newURL()">Eric Bailly</a></li>
+                        <li class="more"><a href="/lingard" th:onclick="newURL()">Jesse Lingard</a></li>
+                        <li class="more"><a href="/van_de_beek" th:onclick="newURL()">Donnie van de Beek</a></li>
+                        <li class="more"><a href="/matic" th:onclick="newURL()">Nemanja Matic</a></li>
+                        <li class="more"><a href="/mctominay" th:onclick="newURL()">Scott McTominay</a></li>
+                        <li class="more"><a href="/fred" th:onclick="newURL()">Fred</a></li>
+                        <li class="more"><a href="/shaw" th:onclick="newURL()">Luke Shaw</a></li>
+                        <li class="more"><a href="/maguire" th:onclick="newURL()">Harry Maguire</a></li>
+                        <p  id="view" onclick="ReadMore()">View all players</p>
+                    </ul>
+                </div>
+                <div class="kits">
+                    <div class="drop_down_items">
+                        <div class="drop_down_items_filter">
+                            <button class="dropbtn">Top Sellers</button>
+                            <div class="dropdown-content">
+                                <a th:href="${low_price}" th:onclick="newURL_CHECK(this)">Lowest Price</a>
+                                <a th:href="${high_price}" th:onclick="newURL_CHECK(this)">Highest Price</a>
+                                <a th:href="${new_item}" th:onclick="newURL_CHECK(this)">Newest Items</a>
+                            </div>
+                        </div>
+                        <div class="drop_down_items_quan">
+                            <button class="dropbtn" >12 Items</button>
+                            <div class="dropdown-content">
+                                <a th:href="${size_one}" th:onclick="newURL_CHECK_item(this)">12 Items</a>
+                                <a th:href="${size_two}" th:onclick="newURL_CHECK_item(this)">24 Items</a>
+                                <a th:href="${size_three}" th:onclick="newURL_CHECK_item(this)">36 Items</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+	                    <div class="goods" th:each="index:${#numbers.sequence(0,mult)}" th:if="${index % 3}==0">
+	                        <!-- first row -->
+	                        <div class="wr_goods">
+	                            <div class="good_cards" >
+	                                <div class="good_cards_img"><img th:src="${img_source[index].src_arr}" th:alt="${img_source[index].alt_arr}"></div>
+	                                <div class="price"><sup>£</sup><span th:text="${img_source[index].pr_arr}"></span><sup th:text="${img_source[index].pr_coin_arr}"></sup></div>
+	                                <a class="desript" href="/link" id="link" th:onclick="newURL_T(this)" th:text="${img_source[index].alt_arr}"></a>
+	                            </div>
+	                            <div class="good_cards" >
+	                                <div class="good_cards_img"><img th:src="${img_source[index+1].src_arr}" th:alt="${img_source[index+1].alt_arr}"></div>
+	                                <div class="price"><sup>£</sup><span th:text="${img_source[index+1].pr_arr}"></span><sup th:text="${img_source[index+1].pr_coin_arr}"></sup></div>
+	                                <a class="desript" href="/link" id="link" th:onclick="newURL_T(this)" th:text="${img_source[index+1].alt_arr}"></a>
+	                            </div>
+	                            <div class="good_cards" >
+	                                <div class="good_cards_img"><img th:src="${img_source[index+2].src_arr}"  th:alt="${img_source[index+2].alt_arr}"></div>
+	                                <div class="price"><sup>£</sup><span th:text="${img_source[index+2].pr_arr}"></span><sup th:text="${img_source[index+2].pr_coin_arr}"></sup></div>
+	                                <a class="desript" href="/link" id="link" th:onclick="newURL_T(this)" th:text="${img_source[index+2].alt_arr}"></a>
+	                            </div>
+	                        </div>
+	                        <!--th:each="img_src,iterStat:${img_source}" th:if="${iterStat.index}>=${n} and ${iterStat.index}<=${n}*3"-->
+	                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer">
+				<div class="wrapper_footer">
+					<div class="footer_card">
+						<h3>customer service</h3>
+						<p>
+							<a href="/help" target="_blank">Help</a>
+						</p>
+						<p>
+							<a href="/track" target="_blank">Track Order</a>
+						</p>
+						<p>
+							<a href="/size_chart" target="_blank">Size Chart</a>
+						</p>
+					</div>
+					<div class="footer_card">
+						<h3>Information</h3>
+						<p>
+							<a href="/help" target="_blank">About us</a>
+						</p>
+						<p>
+							<a href="/affiliate" target="_blank">Affiliate Program</a>
+						</p>
+					</div>
+					<div class="footer_card">
+						<h3>Follow us</h3>
+						<div class="icons">
+							<div class="icon">
+								<a href="https://www.facebook.com/manchesterunited" target="_blank"><img src="./icon/facebook.png" alt="facebook"></a>
+							</div>
+							<div class="icon">
+								<a href="https://twitter.com/ManUtd" target="_blank"><img src="./icon/twitter.png" alt="twitter"></a>
+							</div>
+							<div class="icon">
+								<a href="https://www.instagram.com/manchesterunited" target="_blank"><img src="./icon/instagram.png" alt="youtube"></a>
+							</div>
+							<div class="icon">
+								<a href="https://www.youtube.com/manutd" target="_blank"><img
+									src="./icon/premium-icon-youtube-3669688.png" alt="youtube"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copy_right">
+					<img src="./icon/copyright.png" alt="CopyRight" id="theme"
+						onclick="myFunc()">
+					<h3>Hasan Abdurahmonov 2021</h3>
+				</div>
+			</div>
+        </div>
+
+            <script>
+            function myFunc(){
+                if(document.body.style.backgroundColor == "white"){
+                document.body.style.backgroundImage="url('./Photos/siniy_pyatna_fon_odnotonnyy_69084_1920x1080.jpg')";
+                document.body.style.backgroundRepeat="no-repeat";
+                document.body.style.backgroundSize="cover";
+                document.body.style.backgroundColor ="gray";
+                }else{
+                document.body.style.backgroundColor="none";
+                document.body.style.backgroundColor="white";
+                document.body.style.backgroundImage="none";
+                }
+            
+            }
+
+            function ReadMore(){
+                var more=document.getElementsByClassName('more');
+                var view=document.getElementById('view');
+                for(var i =0; i<more.length;i++){
+                    more[i].style.display="block";
+                }
+                view.style.display="none";
+            }
+            
+            function newURL(){
+            	let stateObj = { foo: "players" }
+            	history.pushState(stateObj, "player", "[[${url}]]");	
+            }
+            
+			function newURL_T(link){
+            	
+            	let stateObj = { foo: "players" }
+            	history.pushState(stateObj, "player", link.innerHTML);	
+            }
+			
+			function newURL_S(){
+				
+            	let stateObj = { foo: "players" }
+            	history.pushState(stateObj, "player", "[[${mes}]]");	
+            }
+			
+			function newURL_CHECK(link){
+				if(link.innerHTML=="Lowest Price"){
+					let stateObj = { foo: "players" }
+	            	history.pushState(stateObj, "player", "[[${mass}]]_lp");	
+				}else if(link.innerHTML=="Highest Price"){
+					let stateObj = { foo: "players" }
+	            	history.pushState(stateObj, "player", "[[${mass}]]_hp");
+				}else if(link.innerHTML=="Newest Items"){
+					let stateObj = { foo: "players" }
+	            	history.pushState(stateObj, "player", "[[${mass}]]_ni");
+				}
+            		
+            }
+			
+			function newURL_CHECK_item(link){
+				if(link.innerHTML=="12 Items"){
+					let stateObj = { foo: "players" }
+	            	history.pushState(stateObj, "player", "[[${item}]]_12");
+				}else if(link.innerHTML=="24 Items"){
+					let stateObj = { foo: "players" }
+	            	history.pushState(stateObj, "player", "[[${item}]]_24");
+				}else if(link.innerHTML=="36 Items"){
+					let stateObj = { foo: "players" }
+	            	history.pushState(stateObj, "player", "[[${item}]]_36");
+				}
+			}
+			
+			
+            </script>
+    </body>
+</html>
