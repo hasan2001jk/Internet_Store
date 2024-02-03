@@ -1,0 +1,14 @@
+- name: Docker run container(app)
+  tags: docker_run
+  docker_container:
+    name: docker_cont_app
+    image: "{{docker_image_app}}"
+    network_mode: host
+    state: started
+- name: Docker run containter(db)
+  tags: docker_run
+  docker_container:
+    name: docker_cont_db
+    image: "{{docker_image_db}}"
+    network_mode: host
+    state: started
