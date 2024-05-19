@@ -1,5 +1,5 @@
 # Internet_Store
-This is a web-based project developed for my University **`Samara State Transport University`**. The website, **`CakeStudio`**, provides an easy and convenient platform for customers to order cakes and desserts while they are commuting by railway. With a *user-friendly* interface, customers can browse through a wide variety of delicious offerings and place an order with just a few clicks. Perfect for those who are on-the-go and have a sweet tooth.
+This is a web-based project replicated from the official **`Manchester United`** website for my **`Samara State Transport University`** course. The website, **`manutd`**, provides a straightforward and efficient platform for fans to purchase merchandise while they are commuting. With an easily navigable interface, customers can explore a broad array of official goods and place an order with just a few clicks. Ideal for those who are constantly on the move and support the **Red Devils**.
 
 ## Prerequisites
 
